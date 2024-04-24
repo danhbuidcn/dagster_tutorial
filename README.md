@@ -36,14 +36,38 @@ source ~/.bashrc
 dagster --version
 ```
 
+# Projects
+
 ## Creating Dagster project option 1 (tutorial project)
 
 [full version](./tutorial/)
+
+```
+cd tutorial
+dagster dev -p 3000
+```
 
 ## Creating Dagster project option 2 (hello_dagster project)
 
 [shortest version](/hello_dagster/)
 
+```
+cd hello_dagster
+dagster dev -f hello_dagster.py -p 3001
+```
+
+## Creating dbt with Dagster project (tutorial-dbt-dagster project)
+
+[tutorial-dbt-dagster](/tutorial-dbt-dagster/jaffle_shop)
+
 # Note
 
 * Trong Python, một hàm được định nghĩa với kiểu trả về là None có nghĩa là hàm đó không trả về bất kỳ giá trị nào.
+
+# Dagster Essentials
+
+[link](https://courses.dagster.io/courses/dagster-essentials)
+
+# Dagster & dbt
+
+[link](https://courses.dagster.io/courses/dagster-dbt)

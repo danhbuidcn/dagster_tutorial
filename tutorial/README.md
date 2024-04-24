@@ -20,10 +20,10 @@ dagster dev -p 3000
 
 ## Writing your first asset
 
-Ingest data from the Hacker News API
-Turn that ingestion into an asset
-Explore the Dagster UI
-Launch your first Dagster run manually
+- Ingest data from the Hacker News API
+- Turn that ingestion into an asset
+- Explore the Dagster UI
+- Launch your first Dagster run manually
 
 ### Step 1: Write your first asset (topstory_ids)
 
@@ -35,9 +35,9 @@ Launch your first Dagster run manually
 
 ## Building an asset graph
 
-Add more assets to your Dagster project
-Connect them to finish creating the pipeline
-Give users more knowledge about the assets by adding metadata and logging
+- Add more assets to your Dagster project
+- Connect them to finish creating the pipeline
+- Give users more knowledge about the assets by adding metadata and logging
 
 ### Step 1: Adding the DataFrame asset (topstories)
 
@@ -62,8 +62,8 @@ Give users more knowledge about the assets by adding metadata and logging
 
 ## Scheduling your pipeline
 
-Structure your project with code locations and jobs
-Refresh your assets periodically with schedules
+- Structure your project with code locations and jobs
+- Refresh your assets periodically with schedules
 
 ### Step 1: Defining what assets to update (define_asset_job)
 

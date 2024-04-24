@@ -1,0 +1,66 @@
+Running with dbt=1.7.13
+Registered adapter: duckdb=1.7.4
+Found 5 models, 2 seeds, 20 tests, 1 source, 0 exposures, 0 metrics, 394 macros, 0 groups, 0 semantic models
+
+Concurrency: 24 threads (target='dev')
+
+1 of 27 START sql view model main.stg_customers ................................ [RUN]
+2 of 27 START seed file main.raw_orders ........................................ [RUN]
+3 of 27 START seed file main.raw_payments ...................................... [RUN]
+3 of 27 OK loaded seed file main.raw_payments .................................. [[32mINSERT 113[0m in 0.21s]
+4 of 27 START sql view model main.stg_payments ................................. [RUN]
+2 of 27 OK loaded seed file main.raw_orders .................................... [[32mINSERT 99[0m in 0.23s]
+1 of 27 OK created sql view model main.stg_customers ........................... [[32mOK[0m in 0.27s]
+5 of 27 START sql view model main.stg_orders ................................... [RUN]
+6 of 27 START test not_null_stg_customers_customer_id .......................... [RUN]
+7 of 27 START test unique_stg_customers_customer_id ............................ [RUN]
+6 of 27 PASS not_null_stg_customers_customer_id ................................ [[32mPASS[0m in 0.19s]
+7 of 27 PASS unique_stg_customers_customer_id .................................. [[32mPASS[0m in 0.19s]
+4 of 27 OK created sql view model main.stg_payments ............................ [[32mOK[0m in 0.29s]
+8 of 27 START test accepted_values_stg_payments_payment_method__credit_card__coupon__bank_transfer__gift_card  [RUN]
+9 of 27 START test not_null_stg_payments_payment_id ............................ [RUN]
+10 of 27 START test unique_stg_payments_payment_id ............................. [RUN]
+5 of 27 OK created sql view model main.stg_orders .............................. [[32mOK[0m in 0.35s]
+11 of 27 START test accepted_values_stg_orders_status__placed__shipped__completed__return_pending__returned  [RUN]
+12 of 27 START test not_null_stg_orders_order_id ............................... [RUN]
+13 of 27 START test unique_stg_orders_order_id ................................. [RUN]
+8 of 27 PASS accepted_values_stg_payments_payment_method__credit_card__coupon__bank_transfer__gift_card  [[32mPASS[0m in 0.21s]
+9 of 27 PASS not_null_stg_payments_payment_id .................................. [[32mPASS[0m in 0.21s]
+10 of 27 PASS unique_stg_payments_payment_id ................................... [[32mPASS[0m in 0.21s]
+12 of 27 PASS not_null_stg_orders_order_id ..................................... [[32mPASS[0m in 0.11s]
+13 of 27 PASS unique_stg_orders_order_id ....................................... [[32mPASS[0m in 0.11s]
+11 of 27 PASS accepted_values_stg_orders_status__placed__shipped__completed__return_pending__returned  [[32mPASS[0m in 0.12s]
+14 of 27 START sql table model main.customers .................................. [RUN]
+15 of 27 START sql table model main.orders ..................................... [RUN]
+15 of 27 OK created sql table model main.orders ................................ [[32mOK[0m in 0.10s]
+16 of 27 START test accepted_values_orders_status__placed__shipped__completed__return_pending__returned  [RUN]
+17 of 27 START test not_null_orders_amount ..................................... [RUN]
+18 of 27 START test not_null_orders_bank_transfer_amount ....................... [RUN]
+19 of 27 START test not_null_orders_coupon_amount .............................. [RUN]
+20 of 27 START test not_null_orders_credit_card_amount ......................... [RUN]
+21 of 27 START test not_null_orders_customer_id ................................ [RUN]
+22 of 27 START test not_null_orders_gift_card_amount ........................... [RUN]
+23 of 27 START test not_null_orders_order_id ................................... [RUN]
+24 of 27 START test unique_orders_order_id ..................................... [RUN]
+14 of 27 OK created sql table model main.customers ............................. [[32mOK[0m in 0.17s]
+25 of 27 START test not_null_customers_customer_id ............................. [RUN]
+26 of 27 START test relationships_orders_customer_id__customer_id__ref_customers_  [RUN]
+27 of 27 START test unique_customers_customer_id ............................... [RUN]
+16 of 27 PASS accepted_values_orders_status__placed__shipped__completed__return_pending__returned  [[32mPASS[0m in 0.54s]
+17 of 27 PASS not_null_orders_amount ........................................... [[32mPASS[0m in 0.54s]
+18 of 27 PASS not_null_orders_bank_transfer_amount ............................. [[32mPASS[0m in 0.56s]
+19 of 27 PASS not_null_orders_coupon_amount .................................... [[32mPASS[0m in 0.56s]
+20 of 27 PASS not_null_orders_credit_card_amount ............................... [[32mPASS[0m in 0.56s]
+21 of 27 PASS not_null_orders_customer_id ...................................... [[32mPASS[0m in 0.57s]
+22 of 27 PASS not_null_orders_gift_card_amount ................................. [[32mPASS[0m in 0.57s]
+23 of 27 PASS not_null_orders_order_id ......................................... [[32mPASS[0m in 0.57s]
+24 of 27 PASS unique_orders_order_id ........................................... [[32mPASS[0m in 0.58s]
+25 of 27 PASS not_null_customers_customer_id ................................... [[32mPASS[0m in 0.48s]
+26 of 27 PASS relationships_orders_customer_id__customer_id__ref_customers_ .... [[32mPASS[0m in 0.48s]
+27 of 27 PASS unique_customers_customer_id ..................................... [[32mPASS[0m in 0.49s]
+
+Finished running 2 seeds, 3 view models, 20 tests, 2 table models in 0 hours 0 minutes and 1.76 seconds (1.76s).
+
+[32mCompleted successfully[0m
+
+Done. PASS=27 WARN=0 ERROR=0 SKIP=0 TOTAL=27

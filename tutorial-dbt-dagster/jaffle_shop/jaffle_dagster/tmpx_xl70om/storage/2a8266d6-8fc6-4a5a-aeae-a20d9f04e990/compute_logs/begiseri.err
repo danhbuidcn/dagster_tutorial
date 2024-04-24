@@ -1,0 +1,5 @@
+[32m2024-04-25 14:11:53 +0700[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 2a8266d6-8fc6-4a5a-aeae-a20d9f04e990 - 616382 - LOGS_CAPTURED - Started capturing logs in process (pid: 616382).
+[32m2024-04-25 14:11:53 +0700[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 2a8266d6-8fc6-4a5a-aeae-a20d9f04e990 - 616382 - raw_customers - STEP_START - Started execution of step "raw_customers".
+[32m2024-04-25 14:11:54 +0700[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 2a8266d6-8fc6-4a5a-aeae-a20d9f04e990 - 616382 - raw_customers - STEP_OUTPUT - Yielded output "result" of type "Nothing". (Type check passed).
+[32m2024-04-25 14:11:54 +0700[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 2a8266d6-8fc6-4a5a-aeae-a20d9f04e990 - 616382 - raw_customers - ASSET_MATERIALIZATION - Materialized value raw_customers.
+[32m2024-04-25 14:11:54 +0700[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 2a8266d6-8fc6-4a5a-aeae-a20d9f04e990 - 616382 - raw_customers - STEP_SUCCESS - Finished execution of step "raw_customers" in 399ms.
